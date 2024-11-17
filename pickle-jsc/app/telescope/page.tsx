@@ -10,7 +10,7 @@ export function ThreeJSScene() {
       <div className="relative w-1/4 text-left mt-8 text-white mr-24 -mt-48">
         <h1 className="text-8xl font-bold mb-4">JWST.</h1>
         <p className="mb-4 text-sm">
-          The James Webb Space Telescope, the most powerful in space, unravels the universe's story—from the Big Bang to our solar system—bringing us closer to understanding our origins and the forces that shaped cosmic history.
+          The James Webb Space Telescope, the most powerful in space, unravels the universe&apos;s story—from the Big Bang to our solar system—bringing us closer to understanding our origins and the forces that shaped cosmic history.
         </p>
         <button
           onClick={() => window.open("https://science.nasa.gov/mission/webb/", "_blank", "noopener,noreferrer")}

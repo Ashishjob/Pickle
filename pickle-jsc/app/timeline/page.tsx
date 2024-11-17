@@ -3,6 +3,7 @@
 import React from "react";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
+import Image from "next/image";
 
 const events = [
   { date: "1996", description: "Initiation of the Next Generation Space Telescope project" },
@@ -46,7 +47,7 @@ const Timeline = () => {
 
               {/* Star Image */}
               <div className="absolute left-1/2 transform -translate-x-1/2 w-32 h-32">
-                <img src="/star.svg" alt="Star" className="w-full h-full" />
+                <Image src="/star.svg" alt="Star" className="w-full h-full" height={32} width={32} />
               </div>
             </div>
           ))}

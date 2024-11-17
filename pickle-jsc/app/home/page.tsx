@@ -25,7 +25,7 @@ export function Home() {
         className="relative flex-col md:flex-row z-10 text-3xl md:text-5xl md:leading-tight max-w-5xl mx-auto text-center text-shadow tracking-tight font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-white to-white flex items-center gap-2 md:gap-8"
         style={{ opacity }}
       >
-        <span>We wonder. It's our nature.</span>
+        <span>We wonder. It&apos;s our nature.</span>
       </h2>
       <ShootingStars />
       <StarsBackground />

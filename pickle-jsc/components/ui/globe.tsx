@@ -57,7 +57,6 @@ const GLOBE_CONFIG: COBEOptions = {
 };
 
 export default function Globe({
-  className,
   config = GLOBE_CONFIG,
 }: {
   className?: string;
@@ -97,7 +96,6 @@ export default function Globe({
       // Update satellite position
       if (satelliteRef.current) {
         const radius = 1.2; // Distance from the Earth
-        const speed = 0.01; // Rotation speed
         const angle = phi * 10; // Adjust orbit speed relative to phi
         satelliteRef.current.position.set(
           radius * Math.cos(angle),

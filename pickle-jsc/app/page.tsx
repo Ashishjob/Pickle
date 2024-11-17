@@ -128,7 +128,6 @@ const ChatbotModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 };
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState("home");
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
 
