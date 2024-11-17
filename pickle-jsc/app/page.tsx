@@ -5,6 +5,7 @@ import { Home } from "./home/page";
 import { ThreeJSScene } from "./telescope/page";
 import Image from "next/image";
 import { ExplorePage } from "./explore/page";
+import { GlobeDemo } from "./globe/page";
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!);
@@ -134,6 +135,7 @@ export default function App() {
       <Home />
       <ThreeJSScene />
       <ExplorePage />
+      <GlobeDemo />
       <ChatbotModal isOpen={isChatbotOpen} onClose={toggleChatbot} />
       <button
         onClick={toggleChatbot}
