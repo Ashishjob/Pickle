@@ -1,16 +1,16 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { Home } from "./home/page";
-import { Telescope } from "./telescope/page";
+import Home from "./home/page";
+import Telescope from "./telescope/page";
 import Image from "next/image";
-import { Explore } from "./explore/page";
-import { Globes } from "./globes/page";
+import Explore from "./explore/page";
+import Globes from "./globes/page";
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
-import { Quote2 } from "./quote2/page";
-import { Quote3 } from "./quote3/page";
+import Quote2 from "./quote2/page";
+import Quote3 from "./quote3/page";
 import Timeline from "./timeline/page";
-import { Quote4 } from "./quote4/page";
+import Quote4 from "./quote4/page";
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!);

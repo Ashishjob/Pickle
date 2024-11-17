@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 
-export function Quote4() {
+export default function Quote4() {
   const [opacity, setOpacity] = useState(1);
   const quoteRef = useRef<HTMLHeadingElement>(null);
 

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 
-export function Home() {
+export default function Home() {
   const [opacity, setOpacity] = useState(1);
 
   useEffect(() => {
