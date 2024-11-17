@@ -4,7 +4,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import Globe from "@/components/ui/globe";
 
-export function GlobeDemo() {
+export function Globes() {
   return (
     <div className="relative w-full h-fit">
       <div className="absolute inset-0 w-full h-[700px] overflow-hidden">

@@ -2,10 +2,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Home } from "./home/page";
-import { ThreeJSScene } from "./telescope/page";
+import { Telescope } from "./telescope/page";
 import Image from "next/image";
-import { ExplorePage } from "./explore/page";
-import { GlobeDemo } from "./globe/page";
+import { Explore } from "./explore/page";
+import { Globes } from "./globes/page";
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import { Quote2 } from "./quote2/page";
 import { Quote3 } from "./quote3/page";
@@ -153,13 +153,13 @@ export default function App() {
     <div className="relative min-h-screen">
       <audio id="background-audio" src="/waltz.mp3" loop />
       <Home />
-      <ThreeJSScene />
+      <Telescope />
       <Quote2 />
-      <ExplorePage />
+      <Explore />
       <Quote3 />
       <Timeline />
       <Quote4 />
-      <GlobeDemo />
+      <Globes />
       <ChatbotModal isOpen={isChatbotOpen} onClose={toggleChatbot} />
       <button
         onClick={toggleChatbot}

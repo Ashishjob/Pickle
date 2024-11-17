@@ -4,7 +4,7 @@ import { Model } from "./Model";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 
-export function ThreeJSScene() {
+export function Telescope() {
   return (
     <div className="relative w-full h-screen bg-[#171717] flex flex-row items-center justify-center">
       <div className="relative w-1/4 text-left mt-8 text-white mr-24 -mt-48">
