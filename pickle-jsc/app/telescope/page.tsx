@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Model } from "./Model";
 import { ShootingStars } from "@/components/ui/shooting-stars";
