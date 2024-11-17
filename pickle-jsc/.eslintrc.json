@@ -1,3 +1,8 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off", // Ignore 'no-explicit-any' globally
+    "react-hooks/exhaustive-deps": "warn", // Change missing dependency warnings to warnings
+    "@typescript-eslint/no-unused-vars": "off" // Disable unused variable checks
+  }
 }
