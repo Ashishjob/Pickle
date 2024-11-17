@@ -1,11 +1,16 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Home } from "./home/page";
 import { ThreeJSScene } from "./telescope/page";
 import Image from "next/image";
 import { ExplorePage } from "./explore/page";
 import { GlobeDemo } from "./globe/page";
+import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
+import { Quote2 } from "./quote2/page";
+import { Quote3 } from "./quote3/page";
+import Timeline from "./timeline/page";
+import { Quote4 } from "./quote4/page";
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!);
@@ -125,16 +130,36 @@ const ChatbotModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
 
   const toggleChatbot = () => {
     setIsChatbotOpen(!isChatbotOpen);
   };
 
+  const toggleAudio = () => {
+    const audio = document.getElementById("background-audio") as HTMLAudioElement;
+    if (audio) {
+      if (isAudioPlaying) {
+        audio.pause();
+      } else {
+        audio.play().catch(error => {
+          console.error("Audio playback failed:", error);
+        });
+      }
+      setIsAudioPlaying(!isAudioPlaying);
+    }
+  };
+
   return (
     <div className="relative min-h-screen">
+      <audio id="background-audio" src="/waltz.mp3" loop />
       <Home />
       <ThreeJSScene />
+      <Quote2 />
       <ExplorePage />
+      <Quote3 />
+      <Timeline />
+      <Quote4 />
       <GlobeDemo />
       <ChatbotModal isOpen={isChatbotOpen} onClose={toggleChatbot} />
       <button
@@ -142,6 +167,12 @@ export default function App() {
         className="fixed bottom-4 right-4 bg-transparent border-none rounded-full w-14 h-14 flex justify-center items-center cursor-pointer shadow-lg z-10 p-0"
       >
         <Image src="/jwst.svg" alt="Chatbot Icon" height={32} width={32} />
+      </button>
+      <button
+        onClick={toggleAudio}
+        className="fixed bottom-4 left-4 bg-transparent border-none text-[#f5f5f5] rounded-full w-14 h-14 flex justify-center items-center cursor-pointer shadow-lg z-10 p-0"
+      >
+        {isAudioPlaying ? <FaVolumeUp size={24} /> : <FaVolumeMute size={24} />}
       </button>
     </div>
   );
